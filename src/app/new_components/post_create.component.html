@@ -1,0 +1,18 @@
+<mat-card>
+<form (submit)="onAddPost(postForm)"  #postForm="ngForm">
+
+
+<input matInput type="text" name="titile" ngModel minlength="3" #titile="ngModel" placeholder='post titile'/>
+<mat-error *ngIf="titile.invalid">Please enter titile atleast of length 3</mat-error>
+
+<textarea matInput rows="6" name="content" ngModel required #content="ngModel" placeholder='post content'></textarea >
+<mat-error *ngIf="content.invalid"></mat-error>
+<button 
+
+mat-raised-button
+color="primary"
+type="submit" >Submit</button>
+
+</form>
+
+</mat-card>
